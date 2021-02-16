@@ -13,24 +13,23 @@ import net.javacrumbs.shedlock.core.LockProvider;
 import net.javacrumbs.shedlock.provider.jdbctemplate.JdbcTemplateLockProvider;
 
 @Configuration
-//@ComponentScan({ "com.infa.si.app.controllers" })
 @PropertySource("classpath:application.properties")
 public class SchedulerConfiguration {
 
-	/*@Bean
+	@Bean
 	public LockProvider lockProvider() {
 		return new JdbcTemplateLockProvider(getDataSource());
-	}*/
+	}
 
-	/*@Autowired
+	@Autowired
 	private DataSource dataSource;
-	*/
-	/*@Bean
+	
+	@Bean
 	public LockProvider lockProvider() {
 		return new JdbcTemplateLockProvider(dataSource);
-	}*/
+	}
 
-	/*@Bean
+	@Bean
 	public DataSource getDataSource() {
 		DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
 		dataSourceBuilder.driverClassName("org.h2.Driver");
@@ -39,5 +38,5 @@ public class SchedulerConfiguration {
 		dataSourceBuilder.username("sa");
 		dataSourceBuilder.password("");
 		return dataSourceBuilder.build();
-	}*/
+	}
 }
